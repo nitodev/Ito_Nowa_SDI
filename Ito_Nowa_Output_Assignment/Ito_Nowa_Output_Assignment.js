@@ -3,3 +3,4 @@
 // Output Assignment
 
 var married = false;
+var numberOfSiblings = 3;
