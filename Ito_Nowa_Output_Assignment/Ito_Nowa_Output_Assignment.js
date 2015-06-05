@@ -4,3 +4,4 @@
 
 var married = false;
 var numberOfSiblings = 3;
+var countryOfBirth = "Japan";
