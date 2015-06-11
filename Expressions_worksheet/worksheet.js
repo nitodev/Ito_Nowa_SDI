@@ -13,10 +13,18 @@ console.log("Sparky is " + sparkyAge + " human years old, which is " + age + " i
 
 
 // Slice of Pie part 1
+
+/* function totalSlices() {
+	Number(numberOfPizza * numberOfSlices)
+} */
 var numberOfPizza = prompt("How many pizza was ordred?"); // input for # of pizza ordered
 var numberOfSlices = prompt("How many slices per pizza?"); // input for # of slices per pizza
 var people = prompt("How many people are at the party?"); // input for # of people present
-var result = Math.round(Number(numberOfPizza * numberOfSlices) / Number(people)); // rounded value of calculation
+var result = Number(numberOfPizza * numberOfSlices) / Number(people); // value of calculation
 alert("Each person can have " + result + " slices."); // output/alert for the result
 console.log("Each person ate " + result + " slices of pizza at the party."); 
 
+// Slice of Pie part II
+var remainder = result % 1;
+var leftOver = Number(remainder) * Number(numberOfPizza * numberOfSlices);
+alert(leftOver);
