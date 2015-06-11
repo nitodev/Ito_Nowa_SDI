@@ -7,4 +7,4 @@ var numberOfSiblings = 3;  //3 sisters
 var countryOfBirth = "Japan";  //Born in Japan
 
 
-console.log("I am not married, has three sisters, and born in Japan.");
+console.log("Hello, I am " + married + " and has " + numberOfSiblings + " sisters, and was born in " + countryOfBirth);
