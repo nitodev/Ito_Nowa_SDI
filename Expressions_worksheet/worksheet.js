@@ -11,7 +11,6 @@ alert("Sparky is " + age + " in dog years."); // output calculation
 console.log("Sparky is " + sparkyAge + " human years old, which is " + age + " in dog years.");
 
 
-//------------------------------help--------------------------------------
 
 // Slice of Pie part 1
 
@@ -23,15 +22,15 @@ var numberOfPizza = prompt("How many pizza was ordred?"); // input for # of pizz
 var numberOfSlices = prompt("How many slices per pizza?"); // input for # of slices per pizza
 var people = prompt("How many people are at the party?"); // input for # of people present
 var result = Number(numberOfPizza * numberOfSlices) / Number(people); // value of calculation
-alert("Each person can have " + result + " slices."); // output/alert for the result
-console.log("Each person ate " + result + " slices of pizza at the party."); 
+var result2 = Math.floor(result); // ridding decimal for sparky
+alert("Each person can have " + result2 + " slices."); // output/alert for the result
+console.log("Each person ate " + result2 + " slices of pizza at the party."); 
 
 // Slice of Pie part II
-var remainder = result % 1;
-var leftOver = Number(remainder) * Number(numberOfPizza * numberOfSlices);
-alert(leftOver);
+var remainder = Number(numberOfPizza * numberOfSlices) % Number(people);
+alert("Sparky got " + remainder + " slices of pizza!");
+console.log("Sparky got " + remainder + " slices of pizza!");
 
-//-----------------------------------------------------------------------
 
 
 // Average shopping bill
