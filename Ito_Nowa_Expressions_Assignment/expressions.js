@@ -15,3 +15,6 @@ console.log("The total value by multiplication is " + math);
 
 //addition
 var array2 = [prompt("Type your first value for addition:"), prompt("Type your second value for addition:"), prompt("Type your third value for addition")];
+var math2 = array2[0] + array2[1] + array2[2];
+alert("The total added value is " + math2);
+console.log("The total value by addition is " + math2);
