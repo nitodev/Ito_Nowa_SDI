@@ -38,21 +38,31 @@ if(distance >= 200){
 
 //Grade Letter Calculator
 var grade = Number(prompt("What is your grade in percentage??"));
-if(grade >= 95){
+
+var a1 = (grade >= 95 && grade <= 100); //A+
+var a = (grade >= 90 && grade <= 94);  //A
+var b1 = (grade >= 85 && grade <= 89); //B+
+var b = (grade >= 80 && grade <= 84);  //B
+var c1 = (grade >= 76 && grade <= 79); //C+
+var c = (grade >= 73 && grade <= 75);  //C
+var d = (grade >= 70 && grade <= 72);  //D
+var f = (grade >= 0 && grade <= 69);   //F
+
+if(a1){
 	console.log("You have a " + grade + "%, which means you have earned an A+ in the class!");
-}else if(grade >= 90){
+}else if(a){
 	console.log("You have a " + grade + "%, which means you have earned an A in the class!");
-}else if(grade >= 85){
+}else if(b1){
 	console.log("You have a " + grade + "%, which means you have earned an B+ in the class!");
-}else if(grade >= 80){
+}else if(b){
 	console.log("You have a " + grade + "%, which means you have earned an B in the class!");
-}else if(grade >= 76){
+}else if(c1){
 	console.log("You have a " + grade + "%, which means you have earned an C+ in the class.");
-}else if(grade >= 73){
+}else if(c){
 	console.log("You have a " + grade + "%, which means you have earned an C in the class.");
-}else if(grade >= 70){
+}else if(d){
 	console.log("You have a " + grade + "%, which means you have earned an D in the class.");
-}else if(grade >= 0){
+}else if(f){
 	console.log("You have a " + grade + "%, which means you have earned an F in the class.");
 }
 
