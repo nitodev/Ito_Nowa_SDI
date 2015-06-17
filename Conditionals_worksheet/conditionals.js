@@ -69,6 +69,7 @@ if(a1){
 }
 */
 
+/*
 //Check the login------------------------------------------------------------------------------------------------------------------------------
 var name = prompt("Type in your username:");
 var pass = prompt("Type in your password:");
@@ -82,11 +83,45 @@ if(name === prompt("Re-enter your username:")){
 	console.log("User not found. Try again.");
 }
 
-/*
+
 //Ternary option--------------------
-var nameConfirmation;
-nameConfirmation = (name === prompt("Re-enter your username") && pass === prompt("Re-enter your password")) ? "Welcome, " + name + "!" : "Please make sure username/password is valid.";
-console.log(nameConfirmation);
+//var nameConfirmation;
+//nameConfirmation = (name === prompt("Re-enter your username") && pass === prompt("Re-enter your password")) ? "Welcome, " + name + "!" : "Please make sure username/password is valid.";
+//console.log(nameConfirmation);
+*/
+
+/*
+//Tire Pressure -----------------------------------------------------------------------------------------------------------------------------------
+var pressure = [prompt("Input the psi for front left tire"), prompt("Input the psi for front right tire"), prompt("Input the psi for rear left tire"), prompt("Input the psi for rear right tire")];
+
+var tires;
+tires = (pressure[0] === pressure[1] && pressure[2] === pressure[3]) ? "The tires pass spec!" : "Get your tires checked out!";
+console.log(tires);
+
+/*
+//Option 2------------------------
+if(pressure[0] === pressure[1]){
+	if(pressure[2] === pressure[3]){
+		console.log("The tires pass spec!!!");
+	}else{
+		console.log("Get your tires checked out!!!");
+	}
+}else{
+	console.log("Get your tires checked out!!!");
+}
+*/
+
+/*
+//Movie ticket price-------------------------------------------------------------------------------------------------------------------------------
+var time = Number(prompt("What time are you going to the threater?"));
+var age = Number(prompt("What is your age??"));
+if(age >= 55 || age <= 10){
+	console.log("The ticket price is $7");
+}else if(time <= 5 && time >= 3){
+	console.log("The ticket price is $7");
+}else{
+	console.log("The ticket price is $12");
+}
 */
 
 
