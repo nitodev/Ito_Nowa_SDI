@@ -70,4 +70,24 @@ if(a1){
 */
 
 //Check the login------------------------------------------------------------------------------------------------------------------------------
+var name = prompt("Type in your username:");
+var pass = prompt("Type in your password:");
+if(name === prompt("Re-enter your username:")){
+	if(pass === prompt("Re-enter your password:")){
+		console.log("Welcome, " + name + "!");
+	}else{
+		console.log("Password does not match our records.");
+	}
+}else{
+	console.log("User not found. Try again.");
+}
+
+/*
+//Ternary option--------------------
+var nameConfirmation;
+nameConfirmation = (name === prompt("Re-enter your username") && pass === prompt("Re-enter your password")) ? "Welcome, " + name + "!" : "Please make sure username/password is valid.";
+console.log(nameConfirmation);
+*/
+
+
 
