@@ -3,7 +3,7 @@
 // Conditionals worksheet
 
 /*
-// Celsius and Fahrenheit converter
+// Celsius and Fahrenheit converter----------------------------------------------------------------------------------------------------
 var temperature = Number(prompt("What is the temperature without the unit?"));
 var unit = prompt("What unit is the temperature in? Celsius (C) or Fahrenheit (F)");
 
@@ -15,13 +15,14 @@ if(unit == "C" || unit == "c"){
 	console.log("The converted temperature from Fahrenheit is " + temperature + " degrees in Celsius.");
 }
 
-/*  Ternary option
-unit = (unit === "C" || unit === "c") ? "The temperature is " + (((temperature * 9) / 5) + 32) + " degrees in Fahrenheit." : "The temperature is " + (temperature -32) * 5 / 9 + " degrees in Celsius.";
-console.log(unit);
+
+//Ternary option-----
+//unit = (unit === "C" || unit === "c") ? "The temperature is " + (((temperature * 9) / 5) + 32) + " degrees in Fahrenheit." : "The temperature is " + (temperature -32) * 5 / 9 + " degrees in Celsius.";
+//console.log(unit);
 */
 
 /*
-// Last chance for gas!
+// Last chance for gas!------------------------------------------------------------------------------------------------------------------
 var efficiency = Number(prompt("What's your miles per gallon?"));
 var gasLeft = .01 * Number(prompt("How much gas do you have in your tank? (In %)"));
 var capacity = Number(prompt("How much gas can the tank hold? (In Gallons)"));
@@ -36,7 +37,8 @@ if(distance >= 200){
 }
 */
 
-//Grade Letter Calculator
+/*
+//Grade Letter Calculator------------------------------------------------------------------------------------------------------------------
 var grade = Number(prompt("What is your grade in percentage??"));
 
 var a1 = (grade >= 95 && grade <= 100); //A+
@@ -65,6 +67,7 @@ if(a1){
 }else if(f){
 	console.log("You have a " + grade + "%, which means you have earned an F in the class.");
 }
+*/
 
-
+//Check the login------------------------------------------------------------------------------------------------------------------------------
 
