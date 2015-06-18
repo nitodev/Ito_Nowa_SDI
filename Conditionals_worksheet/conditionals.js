@@ -41,7 +41,7 @@ if(distance >= 200){
 //Grade Letter Calculator------------------------------------------------------------------------------------------------------------------
 var grade = Number(prompt("What is your grade in percentage??"));
 
-var a1 = (grade >= 95 && grade <= 100); //A+
+var a1 = (grade >= 95 && grade <= 100);//A+
 var a = (grade >= 90 && grade <= 94);  //A
 var b1 = (grade >= 85 && grade <= 89); //B+
 var b = (grade >= 80 && grade <= 84);  //B
