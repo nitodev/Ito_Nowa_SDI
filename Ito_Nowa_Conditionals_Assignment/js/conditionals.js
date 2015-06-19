@@ -21,7 +21,10 @@ if(weight == "" || time == "" || speed == ""){
 	console.log("You didn't input anything...");
 }else if(isFinite(weight) && isFinite(time) && isFinite(speed)){
 	var result;
-	result = (!isNaN(weight) && !isNaN(time) && isNaN(speed)) ? "You burned " + calPerHour + " calories in " + time + " minutes." : "You must type a valid number(s)";
+	result = (!isNaN(weight) && !isNaN(time) && !isNaN(speed)) ? "You burned " + calPerHour + " calories in " + time + " minutes." : "You must type a valid number(s)";
+	console.log(result);
+}else{
+	console.log("Please try again.");
 }
-console.log(result);
+
 
