@@ -14,13 +14,14 @@ var speed = Number(prompt("How fast is your bike ride? (mph)"));
 		met = Number(prompt("Please type in your speed. (mph)"));
 	}
 
-if(weight == "" || time == "" || speed == ""){
-	console.log("You didn't input anything...");
-}return;
-
-var calPerHour = ((speed * weight * .0053) + (.0083 * (Math.pow(speed, 3)))) * 7.2
+var calPerHour = ((speed * weight * .0053) + (.0083 * (Math.pow(speed, 3)))) * 7.2;
 calPerHour = Math.round((calPerHour / 60) * time);
 
-var confirm
-confirm = (isFinite(weight) && isFinite(time) && isFinite(speed)) ? "You burned " + calPerHour + " calories in " + time + " minutes." : "You must type a valid number(s)";
-console.log(confirm);
+if(weight == "" || time == "" || speed == ""){
+	console.log("You didn't input anything...");
+}else if(isFinite(weight) && isFinite(time) && isFinite(speed)){
+	var result;
+	result = (!isNaN(weight) && !isNaN(time) && isNaN(speed)) ? "You burned " + calPerHour + " calories in " + time + " minutes." : "You must type a valid number(s)";
+}
+console.log(result);
+
