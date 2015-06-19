@@ -9,42 +9,18 @@ var time = Number(prompt("How long is the bike ride? (min.)"));
 	if(time == ""){
 		time = Number(prompt("Please type in your duration. (min.)"));
 	}
-var met = Number(prompt("How fast is your bike ride? (mph)"));
-	if(met == ""){
+var speed = Number(prompt("How fast is your bike ride? (mph)"));
+	if(speed == ""){
 		met = Number(prompt("Please type in your speed. (mph)"));
 	}
 
-weight = Math.round(weight / 2.2)
+if(weight == "" || time == "" || speed == ""){
+	console.log("You didn't input anything...");
+}return;
 
+var calPerHour = ((speed * weight * .0053) + (.0083 * (Math.pow(speed, 3)))) * 7.2
+calPerHour = Math.round((calPerHour / 60) * time);
 
-if(met >= 15){
-	met = 8; // easy
-}else if(met >= 16 && met <= 17){
-	met = 10; // normal
-}else if(met >= 18 && met <= 19){
-	met = 11; // above average
-}else if(met === 20 || met === 21){
-	met = 12; // medium
-}else if(met === 22 || met === 23){
-	met = 13; // fast
-}else if(met === 24 || met === 25){
-	met = 14; //road race
-}else if(met >= 26 && met <= 30){
-	met = 15; // circuit level
-}else if(met > 30){
-	alert("You're going too fast!!!");
-}
-
-var calPerMin = 0.0175 / weight / time * met * weight;
-var result = calPerMin * time;
-console.log("You burned " + result + " calories in " + time + " minutes.");
-
-}else{
-	var time = Number(prompt("How long is the bike ride? (min.)"));
-}if(time == ""){
-	time = Number(prompt("Please type in the duration. (min.)"));
-}else{
-	var met = Number(prompt("How fast is your bike ride? (mph)"));
-}if(met == ""){
-	met = Number(prompt("Please type in the speed. (mph)"))
-}
+var confirm
+confirm = (isFinite(weight) && isFinite(time) && isFinite(speed)) ? "You burned " + calPerHour + " calories in " + time + " minutes." : "You must type a valid number(s)";
+console.log(confirm);
