@@ -19,11 +19,21 @@ while(question == ""){
 }
 
 function numbersPB(PB){
-	var random = Math.random() * (59 - 1) + 1;
-	var pB = Math.random() * (35 - 1) + 1;
+	var randomArray = [];
+	for (var i = 0; i <= 4; i++){
+		var randomPB = Math.round(Math.random() * (59 - 1) + 1);
+		randomArray[i] = randomPB
+	}
+	var pB = Math.round(Math.random() * (35 - 1) + 1);
+	var result = String(randomArray + " PB: " + pB);
+	return result;
 }
 
 
 function numbersFL(FL){
 
 }
+
+
+var test = numbersPB();
+console.log(test);
