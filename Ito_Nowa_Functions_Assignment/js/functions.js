@@ -8,32 +8,33 @@ while(question == ""){
 	question = prompt("Please type 'PB' for Powerball, otherwise, type 'FL' for Florida Lottery.");
 }if(question === "PB" || question === "pb" || question === "FL" || question === "fl"){
 	if(question === "PB" || question === "pb"){
-		question = "Powerball";
-		console.log("You have entered " + question + "!");
+		question = numbersPBFL(4, 1, 59, 1, 35);
+		console.log("You have entered Powerball!");
+		var result = question;
+		console.log("Your lucky Powerball numbers are " + result);
 	}if(question === "FL" || question === "fl"){
-		question = "Florida Lottery";
-		console.log("You have entered " + question + "!");
+		question = numbersPBFL(5, 1, 53, 0, 0);
+		console.log("You have entered Florida Lottery!");
+		var result = question;
+		console.log("Your lucky Florida Lottery numbers are " + result);
 	}
 }else{
 	console.log("You did not enter valid letters. Please try again.");
 }
 
-function numbersPB(PB){
+function numbersPBFL(numbers, min, max, pBMin, pBMax){
 	var randomArray = [];
-	for (var i = 0; i <= 4; i++){
-		var randomPB = Math.round(Math.random() * (59 - 1) + 1);
+	for (var i = 0; i <= numbers; i++){
+		var randomPB = Math.round(Math.random() * (max - min) + min);
 		randomArray[i] = randomPB
 	}
-	var pB = Math.round(Math.random() * (35 - 1) + 1);
-	var result = String(randomArray + " PB: " + pB);
+	if(pBMin >= 1 && pBMax <= 35){
+		var pB = Math.round(Math.random() * (pBMax - pBMin) + pBMin);
+		pB = " PB: " + pB;
+	}else{
+		var pB = "" 
+	}
+	var result = String(randomArray + pB);
 	return result;
 }
 
-
-function numbersFL(FL){
-
-}
-
-
-var test = numbersPB();
-console.log(test);
