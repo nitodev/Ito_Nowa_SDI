@@ -9,15 +9,13 @@ while(question == "" || question != "PB" || question != "pb" || question != "FL"
 		break;
 	}question = prompt("Please type 'PB' for Powerball, otherwise, type 'FL' for Florida Lottery."); //loop to get input
 }if(question === "PB" || question === "pb"){ //condition
-	question = numbersPBFL(4, 1, 59, 1, 35); // values for function para.
 	console.log("You have entered Powerball!"); // output
-	var result = question; // converting
-	console.log("Your Powerball's lucky numbers are " + result); //final output
+	question = numbersPBFL(4, 1, 59, 1, 35); // values for function para.
+	console.log("Your Powerball's lucky numbers are " + question); //final output
 }else if(question === "FL" || question === "fl"){ //condition
-	question = numbersPBFL(5, 1, 53, 0, 0); // values for function para.
 	console.log("You have entered Florida Lottery!"); // output
-	var result = question; //converting
-	console.log("Your Florida Lottery's lucky numbers are " + result); //final output
+	question = numbersPBFL(5, 1, 53, 0, 0); // values for function para.
+	console.log("Your Florida Lottery's lucky numbers are " + question); //final output
 }
 
 function numbersPBFL(numbers, min, max, pBMin, pBMax){ // function w/ para.
