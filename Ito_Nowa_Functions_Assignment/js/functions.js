@@ -3,38 +3,36 @@
 //functions assignment
 
 
-var question = prompt("Type 'PB' for Powerball, otherwise, type 'FL' for Florida Lottery.");
-while(question == ""){
-	question = prompt("Please type 'PB' for Powerball, otherwise, type 'FL' for Florida Lottery.");
-}if(question === "PB" || question === "pb" || question === "FL" || question === "fl"){
-	if(question === "PB" || question === "pb"){
-		question = numbersPBFL(4, 1, 59, 1, 35);
-		console.log("You have entered Powerball!");
-		var result = question;
-		console.log("Your lucky Powerball numbers are " + result);
-	}if(question === "FL" || question === "fl"){
-		question = numbersPBFL(5, 1, 53, 0, 0);
-		console.log("You have entered Florida Lottery!");
-		var result = question;
-		console.log("Your lucky Florida Lottery numbers are " + result);
-	}
-}else{
-	console.log("You did not enter valid letters. Please try again.");
+var question = prompt("Type 'PB' for Powerball, otherwise, type 'FL' for Florida Lottery."); // asking for input
+while(question == "" || question != "PB" || question != "pb" || question != "FL" || question != "fl"){ // condition
+	if(question == "pb" || question == "PB" || question == "fl" || question == "FL"){ //condition to break
+		break;
+	}question = prompt("Please type 'PB' for Powerball, otherwise, type 'FL' for Florida Lottery."); //loop to get input
+}if(question === "PB" || question === "pb"){ //condition
+	question = numbersPBFL(4, 1, 59, 1, 35); // values for function para.
+	console.log("You have entered Powerball!"); // output
+	var result = question; // converting
+	console.log("Your Powerball's lucky numbers are " + result); //final output
+}else if(question === "FL" || question === "fl"){ //condition
+	question = numbersPBFL(5, 1, 53, 0, 0); // values for function para.
+	console.log("You have entered Florida Lottery!"); // output
+	var result = question; //converting
+	console.log("Your Florida Lottery's lucky numbers are " + result); //final output
 }
 
-function numbersPBFL(numbers, min, max, pBMin, pBMax){
-	var randomArray = [];
-	for (var i = 0; i <= numbers; i++){
-		var randomPB = Math.round(Math.random() * (max - min) + min);
-		randomArray[i] = randomPB
+function numbersPBFL(numbers, min, max, pBMin, pBMax){ // function w/ para.
+	var randomArray = []; // creating array
+	for (var i = 0; i <= numbers; i++){ //for-loop
+		var randomPB = Math.round(Math.random() * (max - min) + min); //randomizing and rounded
+		randomArray[i] = randomPB //storing value
 	}
-	if(pBMin >= 1 && pBMax <= 35){
-		var pB = Math.round(Math.random() * (pBMax - pBMin) + pBMin);
-		pB = " PB: " + pB;
+	if(pBMin >= 1 && pBMax <= 35){ // powerball
+		var pB = Math.round(Math.random() * (pBMax - pBMin) + pBMin); // randomizing and rounded
+		pB = " PB: " + pB; //concatenating
 	}else{
-		var pB = "" 
+		var pB = "" // for florida lotto
 	}
-	var result = String(randomArray + pB);
-	return result;
+	var set = String(randomArray + pB); // setting up the return value
+	return set; // return set
 }
 
